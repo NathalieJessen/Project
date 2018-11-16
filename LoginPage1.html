@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>DISH</title>
+        <link rel="stylesheet" href="styleLoginPage1.css"> 
+
+        <h1>DISH</h1>
+<style>
+h1 {
+     color: pink;
+     text-align: center;
+     font-size: 300%;
+     line-height: 120px;
+}
+
+</style>
+
+<script src="User.js"></script>
+
+</head>
+
+<body>
+<div class="login-form">
+<div class="form">
+            <form class="register-form" id="register-form">
+            <input type="text" id="firstname" name="firstname" placeholder="first name"/>
+            <input type="text" id="lastname" name="lastname" placeholder="last name"/>    
+            <input type="text" id="streetaddress" name="streetaddress" placeholder="street address"/>
+            <input type="email" id="email" name="emailaddress" placeholder="email id"/>
+            <input type="username" id="username" name="username"  placeholder="username"/>  
+            <input type="password" id="password" name="password" placeholder="password"/>
+            <button type="button" id="create">Create</button>
+            <p class="message">Already Registered? <a href="#">Login</a> 
+            </p>
+        </form> 
+        
+        <form class="login-form">
+        <input type="text" id="uname" placeholder="username"/>
+        <input type="password" id="pw" placeholder="password"/>
+        <button type="button" onclick="checkLogin()">login</button> 
+        
+        
+    
+
+        <p class="message"> Not registered? <a href="#"> Register</a>
+
+        </p>
+
+
+    </form>
+    </div>
+    </div>  
+    
+     <span id="loginResult"></span>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <!-- here we should retrieve the user.js-->
+    <script src='./Log in1.js' type='text/javascript' ></script>
+    <!--<script src='./Registerform1.js' type='text/javascript' ></script>-->
+
+
+    <script>
+    $('.message a').click(function(){
+    $('form').animate({height:"toggle", opacity: "toggle"}, "slow");
+    }); 
+
+    </script>
+</body>
+</html>

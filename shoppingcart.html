@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  
+  <head> 
+        <link rel="stylesheet" type="text/css" href="shoppingcart.css" media="screen" />
+        <script src="shoppingcart.js"></script>
+    </head>
+
+    <body>
+
+
+<div class="shoppingcart">
+  <!-- Title -->
+  <div class="title">
+    Shopping Bag
+  </div>
+ 
+  <!-- Product #1 -->
+  <div class="item">
+
+ 
+    <div class="image1">
+      <img src="https://yupitsvegan.com/wp-content/uploads/2015/02/teriyaki_cauliflower_rice_bowls_vegan.jpg" alt="DishOfTheDay"style="width:50%"/>
+    </div>
+ 
+    <div class="description">
+      <span>Dish of the day</span>
+      <span>Poké Bowl</span>
+    </div>
+   
+    <form>
+        <div class="value-button" id="decrease" name="quantity" onclick="decreaseValue1()" value="Decrease Value">-</div>
+        <input type="button" span id="number" name="number" input id="number" value="1"/>
+        <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div>
+      </form>
+ 
+    <div class="total-price">80.00kr</div>
+  </div>
+ 
+  <!-- Product #2 -->
+  <div class="item">
+  
+    <div class="image2">
+      <img src="https://www.containerstore.com/catalogimages/248981/10065788WoodenKnivesG_600.jpg?width=1200&height=1200&align=center" alt="WoddenCutlery" style="width:40%"/>
+    </div>
+ 
+    <div class="description">
+      <span>Wooden cutlery</span>
+      <span>Disposable cutlery</span>
+    </div>
+   
+    <form>
+        <div class="value-button" id="decrease" name="quantity" input id="text" onclick="decreaseValue2()" value="Decrease Value">-</div>
+        <input type="button" span id="number2" name="number" input id="number2" value="0" min="0" max="5" />
+        <div class="value-button" id="increase" onclick="increaseValue2()" value="Increase Value">+</div>
+      </form>
+ 
+ 
+    <div class="total-price">10.00kr</div>
+
+  </div>
+
+<!-- Checkout -->
+<div class="checkout">
+        <a href="Checkoutpage.html"><button type="button">Checkout</button></a>
+        <style>
+                a:link, a:visited {
+                    background-color: none;
+                    color: black;
+                    padding: 10px 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    margin-right: 0%;
+                    font-size: 25px;
+                    width: 15%;
+                    float: right;
+                }
+                
+                a:hover, a:active {
+                    background-color: lightgreen;
+                }
+                </style>
+  
+     
+      <!-- Cancel button-->
+      <div class="cancel">
+            <a href="Product%20page.html"><button type="button">Cancel</button></a>
+          </div>
+<!-- The above Cancel-bnt redirects to the main page-->
+
+
+
+</body>
+</html>
+
