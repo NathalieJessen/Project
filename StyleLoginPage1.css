@@ -54,7 +54,7 @@ body{
 
 }
 
-.form button: hover,.form button: active{
+.form button active {
     background: #4433aa;
 
 }
