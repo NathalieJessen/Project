@@ -43,8 +43,8 @@ class User{
         users.push(new User(firstname, lastname, address, email, username, password));
 
         console.log(users);
-        localStorage.setItem('users', JSON.stringify(users))
-    })
+        localStorage.setItem('users', JSON.stringify(users));
+    });
 
 
 //local storage capacaty is limited to a string. It has to be a string. 
@@ -60,10 +60,10 @@ function checkLogin() {
         //text += users [i] + "<br>";
 
         if ( username==users[i].username && password == users[i].password){
-            alert ("Login successfully")
+            alert ("Login successfully");
             window.location.href = "Product%20page.html"; // Redirecting to other page.
                     //return false;
-        return true
+        return true;
         }
 
     }
