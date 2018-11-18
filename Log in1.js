@@ -14,6 +14,7 @@ class User{
 
     var users = JSON.parse(localStorage.getItem("users"));
 
+// User = array 
 
     users = [];
     if(users == null ){
@@ -57,7 +58,7 @@ function checkLogin() {
 
 
     for (i=0; i < users.length; i++){
-        //text += users [i] + "<br>";
+        //text += users [i] + "<br>";  probably relevant
 
         if ( username==users[i].username && password == users[i].password){
             alert ("Login successfully");
@@ -71,7 +72,7 @@ function checkLogin() {
   
 
 
-
+// Remeber to make alert on 'login denied'
 
 //else {
  //   document.getElementById("loginResult").textContent="Login denied"
