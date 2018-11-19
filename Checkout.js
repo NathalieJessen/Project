@@ -1,26 +1,102 @@
-// Js for the buttons on the checkout page 
+//function validate()
+class CreditCard{
+    constructor(cname, ccnum, expmonth, expyear, cvv){
+        this.cname = cname;
+        this.ccnum = ccnum;
+        this.expmonth = expmonth;
+        this.expyear = expyear;
+        this.cvv = cvv;
+    }
+}
+
+// Checkout details Validation 
+
+function validateInput(userInput, regExp) {
+    var regex = new RegExp(regExp) 
+    
+    console.log(regex);
+
+    if(regex.test(userInput)){
+        return true
+    } else {
+        return false
+    }   
+}
 
 function validator(){
 
-    if(!validateInput(username, '^[a-zA-Z0-9]{5,10}$')){
-        alert('Username must contain min 5 - max 10 characters')
+    if(!checkInput(fname, '^[a-zA-Z0-9]{5,10}$')){
+        alert('Full name is required')
         return false;
     }
 
-    if(!validateInput(age, '[0-9]{2}$')){      
-        return false;
-    }
-
-    if(!validateInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+    if(!checkInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
         alert('You have entered an invalid email address')
         return false;
     }
 
-    if(!validateInput(password, '[a-zA-Z0-9]{4,8}$')){
-        alert('Password must contain min 4 - 8 max charakters')
+    if(!checkInput(adr, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+        alert('You have entered an invalid address')
+        return false;
+    }
+        if(!validateInput(country, '^[a-zA-Z0-9]{5,10}$')){
+            alert('Country is required')
+            return false;
+        }
+
+        if(!validateInput(city, '^[a-zA-Z0-9]{5,10}$')){
+            alert('City is required')
+            return false;
+        }
+
+    if(!validateInput(zip, '[a-zA-Z0-9]{4,8}$')){
+        alert('Zip is required')
+        return false;
+    }
+
+    if(!validateInput(cname, '^[a-zA-Z0-9]{5,10}$')){
+        alert('Full name is required')
+        return false;
+    }
+
+    if(!validateInput(ccnum, '[a-zA-Z0-9]{4,8}$')){
+        alert('Credit card number is required')
+        return false;
+    }
+
+    if(!validateInput(expmonth, '[a-zA-Z0-9]{4,8}$')){
+        alert('Zip is required')
+        return false;
+    }
+
+    if(!validateInput(expyear, '[a-zA-Z0-9]{4,8}$')){
+        alert('Expiration year is required')
+        return false;
+    }
+
+    if(!validateInput(cvv, '[a-zA-Z0-9]{4,8}$')){
+        alert('CVV is required')
         return false;
     }
 
     return true;
 
 }
+
+document.getElementById("confirm").addEventListener("click", function() {
+    email = document.getElementById("cname").value;
+    cname = document.getElementById("ccnum").value;
+    ccnum = document.getElementById("cvv").value;
+
+    if(validator()){
+
+        console.log("VALIDATION RETURNS TRUE");
+            event.preventDefault()
+            alert ("Order successfully placed")
+              window.open("orderconfirmed.html");
+            });
+
+    else {
+        console.log("Does not work");
+        return;
+    }
