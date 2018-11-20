@@ -23,25 +23,26 @@
       <img src="https://yupitsvegan.com/wp-content/uploads/2015/02/teriyaki_cauliflower_rice_bowls_vegan.jpg" alt="DishOfTheDay"style="width:50%"/>
     </div>
 
+    
     <div class="description">
       <span>Dish of the day</span>
       <span>Poké Bowl</span>
     </div>
    
     <form>
-        <div class="value-button" id="decrease" name="quantity" onclick="decreaseValue1()" value="Decrease Value">-</div>
-        <input type="button" span id="number" name="number" input id="number" value="1"/>
-        <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div>
+       <!-- <div class="value-button" id="decrease" name="quantity" onclick="decreaseValue1()" value="Decrease Value">-</div>-->
+       <!-- <input type="form" span id="number" name="number" input id="number" value="1"/> -->
+       <!-- <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div>-->
       </form>
  
-    <div class="total-price">80.00kr</div>
+    <div class="price" id="dishprice" >80.00kr</div>
   </div>
  
   <!-- Product #2 -->
   <div class="item">
   
     <div class="image2">
-      <img src="10065788WoodenKnivesG_600.jpg" alt="WoddenCutlery" style="width:40%"/>
+      <img src="https://www.containerstore.com/catalogimages/248981/10065788WoodenKnivesG_600.jpg?width=1200&height=1200&align=center" alt="WoddenCutlery" style="width:40%"/>
     </div>
  
     <div class="description">
@@ -50,15 +51,24 @@
     </div>
    
     <form>
-        <div class="value-button" id="decrease" name="quantity" input id="text" onclick="decreaseValue2()" value="Decrease Value">-</div>
-        <input type="button" span id="number2" name="number" input id="number2" value="0" min="0" max="5" />
-        <div class="value-button" id="increase" onclick="increaseValue2()" value="Increase Value">+</div>
+       <!-- <div class="value-button" id="decrease" name="quantity" input id="text" onclick="decreaseValue2()" value="Decrease Value">-</div> -->
+       <!-- <input type="form" span id="number2" name="number" input id="number2" value="0" min="0" max="5" /> -->
+       <!-- <div class="value-button" id="increase" onclick="increaseValue2()" value="Increase Value">+</div>-->
       </form>
  
  
-    <div class="total-price">10.00kr</div>
+    <div class="price" id="cutleryprice">FREE</div>
 
   </div>
+
+  <div id="dishQ"> <div id="dishQuan"> <p >  Dish quantity wanted:<input id="num" type="number" oninput="calc()" /> </p></div> </div>
+  
+
+
+  <p>Subtotal : <b> kr <span id="total">0</span></b></p>
+
+
+
 
 <!-- Checkout -->
 <div class="checkout">
