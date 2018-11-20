@@ -1,4 +1,3 @@
-
 document.getElementById("create").addEventListener("click", function (){   
     
 
@@ -38,4 +37,3 @@ retrievFromLocalStorage = JSON.parse(retrievFromLocalStorage)
 
 
 console.log(retrievFromLocalStorage)
-
