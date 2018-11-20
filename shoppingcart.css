@@ -7,7 +7,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: powderblue;
+  background-color: pink;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -96,8 +96,7 @@ body {
   }
 
 
-
-  .total-price {
+  .price {
     width: 83px;
     padding-top: 27px;
     text-align: center;
@@ -105,6 +104,14 @@ body {
     color: #43484D;
     font-weight: 300;
   }
+  
+  .dishQuan {
+    width: 200px;
+    position: absolute;
+    text-align: right;
+
+  }
+
 
   @media (max-width: 800px) {
     .shopping-cart {
@@ -125,4 +132,3 @@ body {
     }
    
   }
-
