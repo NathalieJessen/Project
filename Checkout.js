@@ -1,4 +1,4 @@
-//function validate()
+// function validate()
 class CreditCard{
     constructor(cname, ccnum, expmonth, expyear, cvv){
         this.cname = cname;
