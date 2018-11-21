@@ -1,14 +1,16 @@
-
-class Order{
-  constructor(ordernumber, quantity, price, username){
-      this.ordernumber = ordernumber;
-      this.quantity = quantity;
+class Order {
+  constructor(title, price, quantity, day) {
+      this.title = title;
       this.price = price;
-      this.username = username;
-  }
-}
+      this.quantity = quantity;
+      this.day = day;
 
-var activeOrder = new Order('124712')
+    }
+  }
+  
+ 
+var activeOrder = new Order('01')
+
 
 
   function calc() 
@@ -20,48 +22,48 @@ var activeOrder = new Order('124712')
       document.getElementById("total").innerHTML = total
       activeOrder.price = total
     }
-      
-
+    
   }
 
 
   var orders = JSON.parse(localStorage.getItem("Order"));
 
   
-  //Order = [];
+ 
   if(Order == null ){
-      Order.push(new Orer ("01", "3", "240", "mathi"));
-      Order.push(new Order ("02", "2", "160", "nathi"));
+     orders = [];
+      Order.push(new Order ("Poké Bowl", "120", "2", "Monday"));
+      Order.push(new Order ("Pasta Carbonara", "50", "1", "Tuesday"));
       
       localStorage.setItem("Orders", JSON.stringify(activeOrder));
   
       
   
-      // Add users Array to localStorage *JSON.stringify()  - this is not necessary (says Marten) but we can do it     
+      // Add orders array to localStorage *JSON.stringify()  - this is not necessary (says Marten) but we can do it     
               
   } else {
       Orders = JSON.parse(localStorage.getItem('Orders'));
   }
   
   
-  document.getElementById("create").addEventListener("click", function() {
-      firstname = document.getElementById("firstname").value;
-      lastname = document.getElementById("lastname").value;
-      address = document.getElementById("streetaddress").value;
-      email = document.getElementById("email").value;
-      username = document.getElementById("username").value;
-      password = document.getElementById("password").value;
+  document.getElementById("Checkout").addEventListener("click", function() {
+      title = document.getElementById("title").value;
+      price = document.getElementById("price").value;
+      quantity = document.getElementById("quantity").value;
+      day = document.getElementById("day").value;
+      
   
+      orders.push(new Order(title, price, quantity, day));
   
-      users.push(new User(firstname, lastname, address, email, username, password));
-  
-      console.log(users);
-      localStorage.setItem('users', JSON.stringify(users));
+      console.log(orders);
+      localStorage.setItem('orders', JSON.stringify(orders));
   });
   
+
   
   //local storage capacaty is limited to a string. It has to be a string. 
-  
+  /*
+
   function checkLogin() {
   var username=document.getElementById("uname").value;
   var password=document.getElementById("pw").value;
@@ -70,7 +72,7 @@ var activeOrder = new Order('124712')
   
   
   for (i=0; i < users.length; i++){
-      //text += users [i] + "<br>";  probably relevant
+      //text += users [i] + "<br>";  probably not relevant
   
       if ( username==users[i].username && password == users[i].password){
           alert ("Login successfully");
@@ -84,7 +86,7 @@ var activeOrder = new Order('124712')
 
 
 
-
+*/
 
 
 
