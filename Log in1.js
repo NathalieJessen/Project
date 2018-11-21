@@ -41,8 +41,12 @@ document.getElementById("create").addEventListener("click", function() {
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
 
-    if (firstname == '' || lastname == '') {
-        alert('Please provide personal information below')
+
+
+    
+    if (firstname == '' || lastname == '' || address == '' || email == '' || username == '' || password == '') {
+        
+        alert('Please provide the missing personal information below')
         return false
     }
 
@@ -61,9 +65,8 @@ var password=document.getElementById("pw").value;
 
 
 
-
 for (i=0; i < users.length; i++){
-    //text += users [i] + "<br>";  probably relevant
+
 
     if ( username==users[i].username && password == users[i].password){
         alert ("Login successfully");
@@ -75,9 +78,3 @@ for (i=0; i < users.length; i++){
 }
 }
 
-
-
-// Remeber to make alert on 'login denied'
-
-//else {
-//   document.getElementById("loginResult").textContent="Login denied"
