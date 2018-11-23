@@ -1,19 +1,18 @@
-* {
+/* * {
   box-sizing: border-box;
 }
- 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background-color: pink;
-  font-family: 'Roboto', sans-serif;
+ */ 
+html, body {
+  
+    background-color: #ffe699;
+    background-size: cover;
+    background-position: center;
+    font-family:'Roboto', sans-serif;
 }
 
 .shoppingcart {
     width: 750px;
-    height: 470px;
+    height: 500px;
     margin: 90px auto;
     background: #FFFFFF;
     box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
@@ -24,7 +23,7 @@ body {
   }
 
   .title {
-    height: 89px;
+ 
     border-bottom: 1px solid #E1E8EE;
     padding: 30px 30px;
     color: #5E6977;
@@ -33,22 +32,20 @@ body {
   }
    
   .item {
-    padding: 20px 40px;
-    height: 200px;
+    padding: 20px 100px;
+    height: 100px;
     display: flex;
+   
+    
   }
    
   .item:nth-child(3) {
-    border-top:  2px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
+    border-top:  1px solid #E1E8EE;
+    border-bottom: 2px solid #E1E8EE;
+    
+
   }
 
-
-  .image1, 
-  .image2 {
-    margin-right: 0px;
-    top: 20px;
-  }
   
   /* Basic styling of the product name and description */
   .description {
@@ -58,8 +55,8 @@ body {
   }
    
   .description span {
-    display: block;
-    font-size: 14px;
+    display: block; 
+    font-size: 15px;
     color: #43484D;
     font-weight: 400;
   }
@@ -72,16 +69,18 @@ body {
     margin-top: 8px;
     color: #86939E;
   }
+
   form {
     width: 300px;
     margin: 0 auto;
-    text-align: center;
     padding-top: 40px;
+   text-align: center;
   }
+  
   
   /* Quantity box styling */
 
-  .value-button {
+  /*.value-button {
     display: inline-block;
     border-top: 1px solid #ddd;
     border-bottom: 10px solid #ddd;
@@ -94,25 +93,54 @@ body {
     background: #ddd;
    
   }
+  */
 
 
   .price {
     width: 83px;
-    padding-top: 27px;
+    padding-top: 30px;
     text-align: center;
     font-size: 16px;
     color: #43484D;
     font-weight: 300;
   }
-  
-  .dishQuan {
-    width: 200px;
-    position: absolute;
-    text-align: right;
 
+  .quantity {
+    padding-top: 30px;
+    text-align: center;
+    position: right;
+    font-weight: 300;
+    margin-top: 8px;
+    color: black;
   }
 
+.button1 {
+  float: right;
+  margin-right: 15px;
+  transition-duration: 0.4s;
+  width: 80px
+}
 
+.button2 {
+  float: right;
+  margin-right: 5px;
+  transition-duration: 0.4s;
+  width: 80px
+}
+.button1:hover, .button2:hover {
+  background-color: #ff80bf;
+  
+}
+
+
+
+
+
+
+
+  
+
+/*
   @media (max-width: 800px) {
     .shopping-cart {
       width: 100%;
@@ -131,4 +159,4 @@ body {
       margin: 6px 0;
     }
    
-  }
+  } */
