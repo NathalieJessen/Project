@@ -4,7 +4,7 @@ body{
     background-image: url(photo-1523905330026-b8bd1f5f320e.jpg);
     height:90vh;
     background-size: cover;
-    background-position: center
+    background-position: center;
 
 }
 
@@ -44,18 +44,18 @@ body{
     font-family: "roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: pink;
+    background: #ffe699;
     width: 100%;
     border: 0;
     padding: 15px;
-    color: violet;
+    color: black;
     font-size: 14px;
     cursor: pointer;
 
 }
 
 .form button active {
-    background: #4433aa;
+    background: white;
 
 }
 
@@ -67,7 +67,7 @@ body{
 }
 
 .form .message a{
-        color: blueviolet;
+        color: #ff80bf;
         font-size: 18px;
         text-decoration: none;
 
