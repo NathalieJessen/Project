@@ -17,8 +17,6 @@
  
   <!-- Product #1 -->
   <div class="item">
-
- 
     <div class="image1">
       <img src="https://yupitsvegan.com/wp-content/uploads/2015/02/teriyaki_cauliflower_rice_bowls_vegan.jpg" alt="DishOfTheDay"style="width:50%"/>
     </div>
@@ -61,41 +59,25 @@
 
   </div>
 
-  <div id="dishQ"> <div id="dishQuan"> <p >  Dish quantity wanted:<input id="num" type="number" oninput="calc()" /> </p></div> </div>
+  <div>
+  <div class="quantity"> Dish quantity wanted:   <input id="num" type="number" oninput="calc()" /> 
   
+  <p>Subtotal:  <b> DKK <span id="total">0</span></b></p></div>
 
 
-  <p>Subtotal : <b> kr <span id="total">0</span></b></p>
-
-
-
-
+  </div>
+  
 <!-- Checkout -->
-<div id= "checkout" class="checkout">
-        <a href="Checkoutpage.html"><button type="button">Checkout</button></a>
-        <style>
-                a:link, a:visited {
-                    background-color: none;
-                    color: black;
-                    padding: 10px 15px;
-                    text-align: center;
-                    text-decoration: none;
-                    margin-right: 0%;
-                    font-size: 25px;
-                    width: 15%;
-                    float: right;
-                }
-                
-                a:hover, a:active {
-                    background-color: lightgreen;
-                }
-                </style>
-  
-     
+<div>
+    
+  <input type="button" id="cancelbtn" class="button1" value="Cancel" onclick="window.location.href='Product%20page.html'"/>
       <!-- Cancel button-->
-      <div class="cancel">
-            <a href="Product%20page.html"><button type="button">Cancel</button></a>
-          </div>
+      <input type="button" id="checkoutbtn" class="button2" value="Checkout" onclick="window.location.href='Checkoutpage.html'"/>
+  
+          
+</div>
+          
+         
 <!-- The above Cancel-bnt redirects to the main page-->
 
 
