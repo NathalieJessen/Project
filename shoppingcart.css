@@ -52,13 +52,14 @@ html, body {
     padding-top: 20px;
     margin-right: 60px;
     width: 115px;
+  /*  white-space: nowrap;this effect makes the description appear on one line*/ 
   }
    
   .description span {
     display: block; 
     font-size: 15px;
     color: #43484D;
-    font-weight: 400;
+    font-weight: 400; 
   }
    
   .description span:first-child {
@@ -128,7 +129,7 @@ html, body {
   width: 80px
 }
 .button1:hover, .button2:hover {
-  background-color: #ff80bf;
+  background-color: #ffa500;
   
 }
 
