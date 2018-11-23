@@ -1,3 +1,5 @@
+// Converts object into string to push into local storage
+
 class Order {
   constructor(title, price, quantity, day) {
       this.title = title;
@@ -8,9 +10,6 @@ class Order {
     }
   }
   
- 
-var activeOrder = new Order('01')
-
 
 
   function calc() 
@@ -25,6 +24,7 @@ var activeOrder = new Order('01')
     
   }
 
+  var activeOrder = new Order('01')
 
   var orders = JSON.parse(localStorage.getItem("Order"));
 
