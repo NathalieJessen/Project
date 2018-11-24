@@ -10,7 +10,7 @@ class dotd {
 
 
     createHTML() {
-        return "<h1>" + this.title + "</h1>" + 
+        return "<h2>" + this.title + "</h2>" + 
         "<p>" + this.description + "</p>" + 
         "<p>Price:" + this.price + "</p>" + 
         "<class='shopItem'><img width='400px' src=" + this.image + ">" +
