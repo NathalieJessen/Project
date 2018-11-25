@@ -13,7 +13,7 @@ class dotd {
         return "<h1>" + this.title + "</h1>" + 
         "<p>" + this.description + "</p>" + 
         "<span>DKK" + this.price + "</span>" + 
-        "<class='shopItem'><img width='400px' src=" + this.image + ">" +
+        "<span><img width='400px' src=" + this.image + ">" +
         "<p>" + this.day + 
         "s dish </p>"
 
