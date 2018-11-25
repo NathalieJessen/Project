@@ -1,6 +1,11 @@
 // function validate()
 class CreditCard{
-    constructor(cname, ccnum, expmonth, expyear, cvv){
+    constructor(fname, email, adr, city, zip, cname, ccnum, expmonth, expyear, cvv){
+        this.fname = fname;
+        this.email = email;
+        this.adr = adr;
+        this.city = city;
+        this.zip = zip;
         this.cname = cname;
         this.ccnum = ccnum;
         this.expmonth = expmonth;
@@ -25,24 +30,20 @@ function validateInput(userInput, regExp) {
 
 function validator(){
 
-    if(!checkInput(fname, '^[a-zA-Z0-9]{5,10}$')){
+    if(!validateInput(fname, '^[a-zA-Z0-9]{5,10}$')){
         alert('Full name is required')
         return false;
     }
 
-    if(!checkInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+    if(!validateInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
         alert('You have entered an invalid email address')
         return false;
     }
 
-    if(!checkInput(adr, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+    if(!validateInput(adr, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
         alert('You have entered an invalid address')
         return false;
     }
-        if(!validateInput(country, '^[a-zA-Z0-9]{5,10}$')){
-            alert('Country is required')
-            return false;
-        }
 
         if(!validateInput(city, '^[a-zA-Z0-9]{5,10}$')){
             alert('City is required')
@@ -84,10 +85,19 @@ function validator(){
 }
 
 document.getElementById("confirm").addEventListener("click", function() {
-    email = document.getElementById("cname").value;
-    cname = document.getElementById("ccnum").value;
-    ccnum = document.getElementById("cvv").value;
 
+    fname = document.getElementById("fname").value;
+    email = document.getElementById("email").value;
+    adr = document.getElementById("adr").value;
+    city = document.getElementById("city").value;
+    zip = document.getElementById("zip").value;
+    cname = document.getElementById("cname").value;
+    ccnum = document.getElementById("ccnum").value;
+    expmonth = document.getElementById("expmonth").value;
+    expyear = document.getElementById("expyear").value;
+    cvv = document.getElementById("cvv").value;
+    
+    
     if(validator()){
 
         console.log("VALIDATION RETURNS TRUE");
@@ -96,7 +106,8 @@ document.getElementById("confirm").addEventListener("click", function() {
               window.open("orderconfirmed.html");
             })
 
-    else {
+         } else {
         console.log("Does not work");
         return;
     }
+
