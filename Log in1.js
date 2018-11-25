@@ -26,7 +26,6 @@ if(users == null ){
 
     
 
-    // Add users Array to localStorage *JSON.stringify()  - this is not necessary (says Marten) but we can do it     
             
 } else {
     users = JSON.parse(localStorage.getItem('users'));
@@ -57,7 +56,7 @@ document.getElementById("create").addEventListener("click", function() {
 });
 
 
-//local storage capacaty is limited to a string. It has to be a string. 
+//local storage capacaty is limited to a string. 
 
 function checkLogin() {
 var username=document.getElementById("uname").value;
