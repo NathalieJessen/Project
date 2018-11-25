@@ -1,0 +1,57 @@
+html, body {
+  
+    background-color: #ffe699;
+    background-size: cover;
+    background-position: center;
+    font-family:'Roboto', sans-serif;
+}
+
+.shoppingcart {
+    width: 750px;
+    height: 500px;
+    margin: 90px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 8px;
+   
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    padding: 20px 100px;
+    height: 100px;
+    display: flex;
+   
+    
+  }
+   
+  .item:nth-child(3) {
+    border-top:  1px solid #E1E8EE;
+    border-bottom: 2px solid #E1E8EE;
+    
+
+  }
+  /* Basic styling of the product name and description */
+  .description {
+    padding-top: 20px;
+    margin-right: 60px;
+    width: 115px;
+  /*  white-space: nowrap;this effect makes the description appear on one line*/ 
+  }
+   
+  .description span {
+    display: block; 
+    font-size: 15px;
+    color: #43484D;
+    font-weight: 400; 
+  }
+   
+  .description span:first-child {
+    margin-bottom: 5px;
+  }
+  .description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939E;
+  }
