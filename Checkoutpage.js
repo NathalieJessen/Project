@@ -16,11 +16,13 @@ class CreditCard{
 
 // Checkout details Validation 
 
-function validateInput(userInput, regExp) {
-    var regex = new RegExp(regExp);
+function checkInput(userInput, regExp) {
+    var regex = new RegExp(regExp) 
     
+    console.log(userInput)
     console.log(regex);
 
+    console.log(regex.test(userInput))
     if(regex.test(userInput)){
         return true
     } else {
@@ -30,53 +32,55 @@ function validateInput(userInput, regExp) {
 
 function validator(){
 
-    if(!validateInput(fname, '^[a-zA-Z0-9]{5,10}$')){
+    if(!checkInput(fname, '^[a-zA-Z\\s]{0,20}$')){
         alert('Full name is required')
         return false;
     }
 
-    if(!validateInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+    if(!checkInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
         alert('You have entered an invalid email address')
         return false;
+
     }
 
-    if(!validateInput(adr, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+    if(!checkInput(adr, '^[a-zA-Z\\s]{0,20}$')){
         alert('You have entered an invalid address')
         return false;
     }
 
-        if(!validateInput(city, '^[a-zA-Z0-9]{5,10}$')){
+    if(!checkInput(city, '^[a-zA-Z\\s]{0,20}$')){
             alert('City is required')
             return false;
-        }
+    }
 
-    if(!validateInput(zip, '[a-zA-Z0-9]{4,8}$')){
+    if(!checkInput(zip, "^[0-9]{4}$" )){
         alert('Zip is required')
         return false;
     }
 
-    if(!validateInput(cname, '^[a-zA-Z0-9]{5,10}$')){
-        alert('Full name is required')
+    if(!checkInput(cname, '^[a-zA-Z\\s]{0,20}$')){
+    
         return false;
     }
 
-    if(!validateInput(ccnum, '[a-zA-Z0-9]{4,8}$')){
-        alert('Credit card number is required')
+    if(!checkInput(ccnum, "^[0-9\\s]{16}$" )){      
+        alert('Credit Card not valid')
         return false;
     }
 
-    if(!validateInput(expmonth, '[a-zA-Z0-9]{4,8}$')){
-        alert('Zip is required')
+    if(!checkInput(expmonth, "^[0-9]{2}$" )){
+        alert('You have entered an invalid email address')
         return false;
     }
 
-    if(!validateInput(expyear, '[a-zA-Z0-9]{4,8}$')){
-        alert('Expiration year is required')
+    if(!checkInput(expyear, "^[0-9]{4}$" )){
+        alert('You have entered an invalid email address')
         return false;
     }
 
-    if(!validateInput(cvv, '[a-zA-Z0-9]{4,8}$')){
-        alert('CVV is required')
+    console.log(cvv)
+    if(!checkInput(cvv, "^[0-9]{3}$" )){
+        alert('Enter a valid Card Verification Value')
         return false;
     }
 
@@ -84,8 +88,11 @@ function validator(){
 
 }
 
-document.getElementById("confirm").addEventListener("click", function() {
+                              /* DOM MANIPULATION */
+/****************************************************************************************/
 
+document.getElementById("confirm").addEventListener("click", function(event) {
+    event.preventDefault()
     fname = document.getElementById("fname").value;
     email = document.getElementById("email").value;
     adr = document.getElementById("adr").value;
@@ -96,18 +103,48 @@ document.getElementById("confirm").addEventListener("click", function() {
     expmonth = document.getElementById("expmonth").value;
     expyear = document.getElementById("expyear").value;
     cvv = document.getElementById("cvv").value;
-    
-    
+
     if(validator()){
+
 
         console.log("VALIDATION RETURNS TRUE");
             event.preventDefault()
-            alert ("Order successfully placed")
+
+        
+            CreditCard.push(new CreditCard (cname,ccnum, '15.11.2022'))
+
+            localStorage.setItem('CreditCard',JSON.stringify(CreditCard));
+
+      
+// 1. Identify current user
+            for (i=0; i < users.length; i++) {
+                if(users[i].userid == localStorage.getItem('loggedInUser')){
+                var activeUser = users[i]
+                }
+            }
+
+            var orderTitles = []
+            for (i=0; i < activeUser.shoppingCart.length; i++) {
+                orderTitles.push(activeUser.shoppingCart[i].title)
+
+
+            }
+
+            orders.push(new Order ('001', activeUser.userid, Date.now(), orderTitles, 400))
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            activeUser.shoppingCart = []
+
+            localStorage.setItem('users',JSON.stringify(users));
+            // 3. empty shopping cart when order is created
+           
               window.open("orderconfirmed.html");
-            })
 
-         } else {
+            }
+
+
+    else {
         console.log("Does not work");
-        return;
+        return false;
     }
-
+});
