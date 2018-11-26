@@ -1,11 +1,6 @@
 // function validate()
 class CreditCard{
-    constructor(fname, email, adr, city, zip, cname, ccnum, expmonth, expyear, cvv){
-        this.fname = fname;
-        this.email = email;
-        this.adr = adr;
-        this.city = city;
-        this.zip = zip;
+    constructor(cname, ccnum, expmonth, expyear, cvv){
         this.cname = cname;
         this.ccnum = ccnum;
         this.expmonth = expmonth;
@@ -110,33 +105,11 @@ document.getElementById("confirm").addEventListener("click", function(event) {
         console.log("VALIDATION RETURNS TRUE");
             event.preventDefault()
 
-        
-            CreditCard.push(new CreditCard (cname,ccnum, '15.11.2022'))
+        var creditCards = []
 
-            localStorage.setItem('CreditCard',JSON.stringify(CreditCard));
+            creditCards.push(new CreditCard (cname,ccnum,cvv))
 
-      
-// 1. Identify current user
-            for (i=0; i < users.length; i++) {
-                if(users[i].userid == localStorage.getItem('loggedInUser')){
-                var activeUser = users[i]
-                }
-            }
-
-            var orderTitles = []
-            for (i=0; i < activeUser.shoppingCart.length; i++) {
-                orderTitles.push(activeUser.shoppingCart[i].title)
-
-
-            }
-
-            orders.push(new Order ('001', activeUser.userid, Date.now(), orderTitles, 400))
-            localStorage.setItem('orders', JSON.stringify(orders));
-
-            activeUser.shoppingCart = []
-
-            localStorage.setItem('users',JSON.stringify(users));
-            // 3. empty shopping cart when order is created
+            localStorage.setItem('creditCards',JSON.stringify(creditCards));
            
               window.open("orderconfirmed.html");
 
