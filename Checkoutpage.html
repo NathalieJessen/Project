@@ -4,14 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="Checkoutpage.css" media="screen" />
-<script src="Checkoutpage.js"></script>
-  <script src="shoppingcart.js"></script>
 <style>
 body {
   font-family: Arial;
   font-size: 17px;
   padding: 8px;
- 
 }
 
 * {
@@ -120,7 +117,7 @@ span.price {
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="/action_page.php">
+      <form>
       
         <div class="row">
           <div class="col-50">
@@ -160,7 +157,7 @@ span.price {
             <label for="ccnum">Credit card number</label>
             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
             <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <input type="text" id="expmonth" name="expmonth" placeholder="02">
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
@@ -177,8 +174,8 @@ span.price {
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <input type="submit" value="Confirm Order" id = "confirm" class="btn"> 
-        <!--ADD link to ORDER SUCCESSFULL + estimated delivery time-->
+        <input type="submit" value="Confirm Order" id="confirm" class="btn"> 
+        <!--ADD link to ORDER SUCCESSFULL-->
       </form>
     </div>
   </div>
@@ -191,7 +188,7 @@ span.price {
   </div>
 </div>
 
-
+<script src="checkoutpage.js"></script>
 
 </body>
 </html>
