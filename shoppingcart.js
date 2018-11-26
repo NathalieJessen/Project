@@ -12,7 +12,6 @@ class Order{
   }
   
 
-
   function calc() 
   {
     var price = document.getElementById("dishprice").innerHTML;
@@ -26,17 +25,9 @@ class Order{
   }
   var buttons = document.getElementsByClassName('checkout-btn')
 
-  var Orders = JSON.parse(localStorage.getItem("Order"));;
-  localStorage.setItem("Orders", JSON.stringify(Orders));
-
-
-
-/*
-  var Order = JSON.parse(localStorage.getItem("Orders"));
-
-
+  var orders = JSON.parse(localStorage.getItem("orders"));;
   
-  if(Orders == null ) {
+  if(orders == null ) {
       orders = [];
       orders.push(new Order ("Poké Bowl", "60", "2", "monday"));
       orders.push(new Order ("Poké Bowl", "60", "1", "monday"));
@@ -47,15 +38,14 @@ class Order{
     } else {
       orders = JSON.parse(localStorage.getItem('orders'));
   }
+  console.log(orders);
 
 
+  document.getElementById("checkoutbtn").addEventListener("click", function() {
+     orders.push(new Order ("Poké Bowl", "60", document.getElementById("num").value, "monday"));
 
-  document.getElementById("checkout").addEventListener("click", function() {
-    firstname = document.getElementById("title").value;
-    lastname = document.getElementById("price").value;
-    address = document.getElementById("quantity").value;
-    email = document.getElementById("day").value;
+     localStorage.setItem("orders", JSON.stringify(orders));
 
-*/
+});
 
 
