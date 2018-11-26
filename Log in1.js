@@ -49,11 +49,15 @@ document.getElementById("create").addEventListener("click", function() {
         return false
     }
 
-    users.push(new User(firstname, lastname, address, email, username, password));
+    users.push(new User(firstname, lastname, address, email, username, password)); 
+    alert ("Profile successfully created");
+        window.location.href = "LoginPage1.html";
 
     console.log(users);
     localStorage.setItem('users', JSON.stringify(users));
+    //redirect to main page
 });
+
 
 
 //local storage capacaty is limited to a string. 
@@ -68,7 +72,7 @@ for (i=0; i < users.length; i++){
 
 
     if ( username==users[i].username && password == users[i].password){
-        alert ("Login successfully");
+        alert ("Login successful");
         window.location.href = "Product%20page.html"; // Redirecting to other page.
                 //return false;
     return true;
