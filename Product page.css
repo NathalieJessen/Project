@@ -68,7 +68,7 @@ html, body {
     align-items: center;
   }
    
-  .product-price span {
+  .product-price div {
     font-size: 26px;
     font-weight: 300;
     color: #43474D;
