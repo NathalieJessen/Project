@@ -1,4 +1,4 @@
-/*Styling of button*/
+/* Basic Styling */
 html, body {
     height: 100%;
     width: 100%;
@@ -12,31 +12,72 @@ html, body {
     padding: 15px;
     display: flex;
   }
-
- /* Columns */
-.left-column {
-    width: 65%;
-    position: relative;
-  }
-
-  .right-column {
-    width: 35%;
-    margin-top: 60px;
-  }
-
-/* Left column */
-.left-column img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: all 0.3s ease;
-
-  }
   
-  .left-column img.active {
-    opacity: 1;
-  }
+    /* Product Description */
+  .product-description {
+      border-bottom: 1px solid #E1E8EE;
+      
+    }
+    .product-description span {
+      font-size: 12px;
+      color: #358ED7;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      float: left;
+    
+      
+
+      }
+      .description h1 {
+      font-weight: 300;
+      font-size: 52px;
+      color: #43484D;
+      letter-spacing: -2px; 
+       
+    }
+    .description h2{
+      font-size: 16px;
+      font-weight: 300;
+      color: #86939E;
+      
+    }
+
+   .description h3 {
+      font-size: 16px;
+      font-weight: 300;
+      color: black; 
+   }
+
+ 
+
+     
+ 
+    .cart-button {
+        display: inline-block;
+        background-color: #7DC855;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 12px 30px;
+       
+        
+        }
+
+
+/*
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+   
+ 
+
+
+
 
 .product-description {
     font-size: 12px;
@@ -44,9 +85,10 @@ html, body {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 100px 700px;
+    padding: 20px 10px;
     white-space: nowrap;
 }
+
 
 .description h1 {
     font-weight: 100;
@@ -57,15 +99,13 @@ html, body {
    
   }
 
-  .description p {
+  .description div {
     font-size: 16px;
-    font-weight: 300;
+    padding-top: 50px 0;
     color: #86939E;
     line-height: 24px;
   }
-  .product-price {
-   
-  }
+ 
    
   .product-price {
     font-size: 26px;
@@ -74,13 +114,7 @@ html, body {
     margin-right: 20px;
   }
 
-  .img {
-    position: absolute;
-    left: 0;
-    top: 0;
-   
-    
-  }
+
 
   .cart-button {
     display: inline-block;
@@ -91,5 +125,8 @@ html, body {
     text-decoration: none;
     padding: 12px 30px;
     transition: all .5s; 
+    
+
     }
     
+   */
