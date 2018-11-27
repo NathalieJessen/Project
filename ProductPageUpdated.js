@@ -7,15 +7,15 @@ class dotd {
         this.day = day;
 
     }
-
+    
 
     createHTML() {
         return "<h1>" + this.title + "</h1>" + 
-        "<p>" + this.description + "</p>" + 
-        "<span>DKK" + this.price + "</span>" + 
-        "<span><img width='400px' src=" + this.image + ">" +
-        "<p>" + this.day + 
-        "s dish </p>"
+        "<h2>" + this.description + "</h2>" + 
+        "<div>DKK" + this.price + "</div>" + 
+        "<span><img width='500px' src=" + this.image + ">" +
+        "<h3>" + this.day + 
+        "s dish </h3>"
 
         //return '"><h1>'+ this.title + '</h1><p>' + this.description+ '</p>' + this.price+ '<img src ="' + this.image + '"><p>'+ this.day+ '</p>'
 
@@ -25,13 +25,13 @@ class dotd {
 
 
 
-var monday = new dotd('Poke Bowl', 'Rice, Fish and Soybeans ', "60.00", 'https://yupitsvegan.com/wp-content/uploads/2015/02/teriyaki_cauliflower_rice_bowls_vegan.jpg', 'monday');
-var tuesday = new dotd('Pasta Carbonara', 'Spaghetti, eggs, bacon, Parmasan cheese', "50.00", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEbnrc6SRV5yX23Dc7D34QVVR9U17UKsJnjYj3F0M8LQGPFLbWrw', 'tuesday');
-var wednesday = new dotd('Cesear Salad', 'Chicken, iceberg salad, bacon, Parmasan cheese, Ceasar dressing', "50.00", 'https://img.taste.com.au/sxVivf6r/taste/2010/01/the-best-spaghetti-carbonara-118943-2.jpg', 'wednesday');
-var thursday = new dotd('Hamburger', 'Tomato, onions, ketchup, cheddar cheese, bacon, salad, mustard', "70.00", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ1yDHNIocg8rvReOUdXZLb11J7QY-o4zydtaD5Z383kpmiToinw', 'thursday');
-var friday = new dotd('Panfried Salmon', 'Salmon, potatomash, lemon, dill', "50.00", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6BN2RGHbg59B8ZXyFw_DYr-TxcgvWytpf9S4cBP_QsS4BE3A6', 'friday');
-var saturday = new dotd('Risotto', 'Saffron, rice, Parmasan cheese', "60.00", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ55nb1tSxVwzWXFtJrjPg6PaQ2HgaXUSVp8EemgCwofzfmLi_Z', 'saturday');
-var sunday = new dotd('Chicken Curry', 'Chicken, curry, coriander', "50.00", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAFfB6dpH48AwBQrleEJOoE608OBE1JILtU-yUO1AnHQ6Tgan', 'sunday');
+var monday = new dotd('Poke Bowl', 'Roasted Sweet Potato Poke Bowl with Avocado and Sriracha Mayoor.', "60.00", 'images/pokebowl.jpg', 'monday');
+var tuesday = new dotd('Pasta Carbonara', 'Spaghetti, eggs, bacon, Parmasan cheese.', "50.00", 'images/Carbonara.jpg', 'tuesday');
+var wednesday = new dotd('Cesear Salad', 'Chicken, iceberg salad, bacon, parmasan cheese, topped with ceasar dressing', "50.00", 'images/Cesearsalad.jpg', 'wednesday');
+var thursday = new dotd('Hamburger', 'Tomato, onions, ketchup, cheddar cheese, bacon, salad, mustard', "70.00", 'images/hamburger.jpg', 'thursday');
+var friday = new dotd('Pan-fried Salmon', 'Crispy pan-seared salmon with potatomash, lemon and freshly chopped parsley.', "50.00", 'images/panfriedsalmon.jpg', 'friday');
+var saturday = new dotd('Risotto', 'Mushroom and bacon risotto with parmasan cheese.', "60.00", 'images/risotto.jpg', 'saturday');
+var sunday = new dotd('Chicken Curry', 'Chicken, ginger, curry, topped with chopped coriander', "50.00", 'images/chickencurry.jpg', 'sunday');
 
 var dishes = [monday, tuesday, wednesday, thursday, friday, saturday, sunday];
 
