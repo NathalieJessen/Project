@@ -1,3 +1,4 @@
+// Creating the class 'Dish of the day'
 class dotd {
     constructor(title, description, price, image, day) {
         this.title = title;
@@ -8,6 +9,7 @@ class dotd {
 
     }
     
+    // A method that turns the class into html making it possible to display it through html
 
     createHTML() {
         return "<h1>" + this.title + "</h1>" + 
@@ -17,13 +19,11 @@ class dotd {
         "<h3>" + this.day + 
         "s dish </h3>"
 
-        //return '"><h1>'+ this.title + '</h1><p>' + this.description+ '</p>' + this.price+ '<img src ="' + this.image + '"><p>'+ this.day+ '</p>'
 
     }
 }
 
-
-
+// Specifying our variables
 
 var monday = new dotd('Poke Bowl', 'Roasted Sweet Potato Poke Bowl with Avocado and Sriracha Mayoor.', "60.00", 'images/pokebowl.jpg', 'monday');
 var tuesday = new dotd('Pasta Carbonara', 'Spaghetti, eggs, bacon, Parmasan cheese.', "50.00", 'images/Carbonara.jpg', 'tuesday');
