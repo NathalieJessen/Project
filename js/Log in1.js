@@ -55,7 +55,7 @@ document.getElementById("create").addEventListener("click", function() {
 
     console.log(users);
     localStorage.setItem('users', JSON.stringify(users));
-    //redirect to main page
+    
 });
 
 
