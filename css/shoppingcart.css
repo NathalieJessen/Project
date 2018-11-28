@@ -1,7 +1,5 @@
-/* * {
-  box-sizing: border-box;
-}
- */ 
+/* Styling of the shoppingcart */
+
 html, body {
   
     background-color: #ffe699;
@@ -47,12 +45,13 @@ html, body {
   }
 
   
-  /* Basic styling of the product name and description */
+  /* Styling of the product name and description */
   .description {
     padding-top: 20px;
     margin-right: 60px;
     width: 115px;
-  /*  white-space: nowrap;this effect makes the description appear on one line*/ 
+  
+
   }
    
   .description span {
@@ -78,24 +77,6 @@ html, body {
    text-align: center;
   }
   
-  
-  /* Quantity box styling */
-
-  /*.value-button {
-    display: inline-block;
-    border-top: 1px solid #ddd;
-    border-bottom: 10px solid #ddd;
-    margin: 5px;
-    width: 25px;
-    height: 10px;
-    text-align: center; 
-    vertical-align: middle;
-    padding: 9px 0;
-    background: #ddd;
-   
-  }
-  */
-
 
   .price {
     width: 83px;
