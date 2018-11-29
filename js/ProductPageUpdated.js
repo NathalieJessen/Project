@@ -35,7 +35,7 @@ var sunday = new dotd('Chicken Curry', 'Chicken, ginger, curry, topped with chop
 
 var dishes = [monday, tuesday, wednesday, thursday, friday, saturday, sunday];
 
-
+//Loops through our array of dishes, if day equals monday it displays monday
 
 var html = "";
 for(i =0; i < dishes.length; i++ ){
