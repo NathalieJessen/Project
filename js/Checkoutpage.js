@@ -1,4 +1,4 @@
-// function validate()
+// Convert object into string to push into local storage
 class CreditCard{
     constructor(cname, ccnum, expmonth, expyear, cvv){
         this.cname = cname;
@@ -9,7 +9,7 @@ class CreditCard{
     }
 }
 
-// Checkout details Validation 
+// Checkout details validation 
 
 function checkInput(userInput, regExp) {
     var regex = new RegExp(regExp) 
@@ -82,8 +82,7 @@ function validator(){
 
 }
 
-                              /* DOM MANIPULATION */
-/****************************************************************************************/
+// getElementById() returns the element which is what has an ID with the specified value
 
 document.getElementById("confirm").addEventListener("click", function(event) {
     event.preventDefault()
