@@ -49,7 +49,7 @@ document.getElementById("create").addEventListener("click", function() {
         return false
     }
 
-    //If filled oy correctly return true + alert + redirect
+    //If filled out correctly return true + alert + redirect
 
     users.push(new User(firstname, lastname, address, email, username, password)); 
     alert ("Profile successfully created");
