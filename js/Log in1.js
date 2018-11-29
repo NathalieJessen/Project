@@ -1,4 +1,4 @@
-//function validate()
+// User class
 class User{
     constructor(firstname, lastname, address, email, username, password){
         this.firstname = firstname;
@@ -14,7 +14,7 @@ class User{
 
 var users = JSON.parse(localStorage.getItem("users"));
 
-// User = array 
+// User array 
 
 
 if(users == null ){
@@ -31,7 +31,7 @@ if(users == null ){
     users = JSON.parse(localStorage.getItem('users'));
 }
 
-
+// getElementById() returns our element with the specified value
 document.getElementById("create").addEventListener("click", function() {
     firstname = document.getElementById("firstname").value;
     lastname = document.getElementById("lastname").value;
@@ -41,13 +41,15 @@ document.getElementById("create").addEventListener("click", function() {
     password = document.getElementById("password").value;
 
 
-
+//If there are empty fields return false + alert
     
     if (firstname == '' || lastname == '' || address == '' || email == '' || username == '' || password == '') {
         
         alert('Please provide the missing personal information')
         return false
     }
+
+    //If filled oy correctly return true + alert + redirect
 
     users.push(new User(firstname, lastname, address, email, username, password)); 
     alert ("Profile successfully created");
@@ -60,7 +62,7 @@ document.getElementById("create").addEventListener("click", function() {
 
 
 
-//local storage capacaty is limited to a string. 
+//Local storage capacaty is limited to a string. 
 
 function checkLogin() {
 var username=document.getElementById("uname").value;
@@ -74,7 +76,7 @@ for (i=0; i < users.length; i++){
     if ( username==users[i].username && password == users[i].password){
         alert ("Login successful");
         window.location.href = "ProductPageUpdated.html"; // Redirecting to other page.
-                //return false;
+                
     return true;
     }
 
