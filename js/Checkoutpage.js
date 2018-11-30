@@ -31,13 +31,13 @@ function validator(){
         return false;
     }
 
-    if(!checkInput(email, "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
+    if(!checkInput(email, "[a-zA-Z-0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")){
         alert('You have entered an invalid email address')
         return false;
 
     }
 
-    if(!checkInput(adr, '^[a-zA-Z\\s]{0,20}$')){
+    if(!checkInput(adr, "^[a-zA-Z-0-9\\s]{0,40}$")){
         alert('You have entered an invalid address')
         return false;
     }
